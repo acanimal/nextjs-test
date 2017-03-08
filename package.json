@@ -1,0 +1,44 @@
+{
+  "name": "nextjs-test",
+  "version": "1.0.0",
+  "description": "next.js test using express, react, redux, ...",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "none-git"
+  },
+  "keywords": [
+    "next",
+    "react",
+    "redux",
+    "express"
+  ],
+  "author": "Antonio Santiago <asantiagop@gmail.com>",
+  "license": "ISC",
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run test",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "material-ui": "^0.17.0",
+    "next": "^2.0.0-beta",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "standard": "^9.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-styled-components": "^1.0.0",
+    "styled-components": "^1.4.4"
+  }
+}
