@@ -1,40 +1,25 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import styled from 'styled-components'
+import React from 'react';
+import { FormattedMessage, FormattedNumber, intlShape } from 'react-intl';
+import Head from 'next/head';
+import pageWithIntl from '../components/PageWithIntl';
+import Layout from '../components/Layout';
 
-const Zone = styled('div')`
-  background: green
-`
-
-const App = ({ children, title = '' }) => (
-  <div>
+const Index = ({ intl }) => (
+  <Layout>
     <Head>
-      <title>{ title }</title>
-      <meta charSet='utf-8' />
-      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' />
+      <meta name="description" content={intl.formatMessage({ id: 'html.description' })} />
     </Head>
-    <header>
-      <nav>
-        <Link href='/'><a>Home</a></Link> |
-        <Link href='/about'><a>About</a></Link> |
-        <Link href='/contact'><a>Contact</a></Link>
-      </nav>
-    </header>
+    <p>
+      <FormattedMessage id="greeting" />
+    </p>
+    <p>
+      <FormattedNumber value={1000} />
+    </p>
+  </Layout>
+);
 
-    <Zone>
-      { children }
-    </Zone>
+Index.propTypes = {
+  intl: intlShape.isRequired,
+};
 
-    <footer>
-      Footer
-    </footer>
-  </div>
-)
-
-export default () => (
-  <App>
-    Nothing to show
-  </App>
-)
+export default pageWithIntl(Index);
