@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-const Zone = styled.div`
-  background-color: green
+const Zone = styled('div')`
+  background: green
 `
 
 const App = ({ children, title = '' }) => (

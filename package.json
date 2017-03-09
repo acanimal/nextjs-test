@@ -15,30 +15,31 @@
   ],
   "author": "Antonio Santiago <asantiagop@gmail.com>",
   "license": "ISC",
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run test",
+    "dev": "node --inspect server.js",
+    "build": "next build",
+    "start": "next start"
+  },
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
       "**/node_modules/**"
     ]
   },
-  "scripts": {
-    "lint": "standard",
-    "test": "npm run test",
-    "dev": "node server.js",
-    "build": "next build",
-    "start": "next start"
-  },
   "dependencies": {
     "express": "^4.15.2",
+    "flow-bin": "^0.41.0",
     "material-ui": "^0.17.0",
     "next": "^2.0.0-beta",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "standard": "^9.0.1"
+    "standard": "^9.0.1",
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "babel-plugin-styled-components": "^1.0.0",
-    "styled-components": "^1.4.4"
+    "babel-plugin-styled-components": "^1.0.0"
   }
 }
