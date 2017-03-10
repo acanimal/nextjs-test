@@ -7,6 +7,7 @@ export default class IntlDocument extends Document {
   static async getInitialProps(context) {
     const props = await super.getInitialProps(context);
     const { req: { localeDataScript, locale } } = context;
+
     return {
       ...props,
       localeDataScript,

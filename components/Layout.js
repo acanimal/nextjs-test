@@ -3,7 +3,7 @@ import { injectIntl } from 'react-intl';
 import Head from 'next/head';
 import Nav from './Nav';
 
-export default injectIntl(({ intl, title, children }) => (
+export default injectIntl(({ intl, children }) => (
   <div>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

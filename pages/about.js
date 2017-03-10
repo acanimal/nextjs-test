@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { FormattedRelative } from 'react-intl';
-import pageWithIntl from '../components/PageWithIntl';
+import pageWithReduxAndIntl from '../container/PageWithReduxAndIntl';
 import Layout from '../components/Layout';
 
 class About extends Component {
-  static async getInitialProps({ req }) {
+  static async getInitialProps() {
     return { someDate: Date.now() };
   }
 
@@ -26,4 +26,4 @@ About.propTypes = {
   someDate: React.PropTypes.number.isRequired,
 };
 
-export default pageWithIntl(About);
+export default pageWithReduxAndIntl(About);

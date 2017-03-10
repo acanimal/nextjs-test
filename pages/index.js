@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage, FormattedNumber, intlShape } from 'react-intl';
 import Head from 'next/head';
-import pageWithIntl from '../components/PageWithIntl';
+import pageWithReduxAndIntl from '../container/PageWithReduxAndIntl';
 import Layout from '../components/Layout';
 
 const Index = ({ intl }) => (
@@ -22,4 +22,4 @@ Index.propTypes = {
   intl: intlShape.isRequired,
 };
 
-export default pageWithIntl(Index);
+export default pageWithReduxAndIntl(Index);
