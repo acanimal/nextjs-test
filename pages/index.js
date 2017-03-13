@@ -1,8 +1,21 @@
 import React from 'react';
 import { FormattedMessage, FormattedNumber, intlShape } from 'react-intl';
 import Head from 'next/head';
+import styled from 'styled-components';
 import pageWithReduxAndIntl from '../container/PageWithReduxAndIntl';
 import Layout from '../components/Layout';
+
+const Label = styled.span`
+  background: red;
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
 
 const Index = ({ intl }) => (
   <Layout>
@@ -12,9 +25,12 @@ const Index = ({ intl }) => (
     <p>
       <FormattedMessage id="greeting" />
     </p>
-    <p>
-      <FormattedNumber value={1000} />
-    </p>
+    <div>
+      <Label>some label here</Label>
+      <Wrapper>
+        <FormattedNumber value={1000} />
+      </Wrapper>
+    </div>
   </Layout>
 );
 
